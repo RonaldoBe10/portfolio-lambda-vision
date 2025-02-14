@@ -1,10 +1,14 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,51 +26,54 @@ const Navigation = () => {
     >
       <nav className="container mx-auto flex items-center justify-between px-4">
         <a href="#" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
-          LP<span className="text-secondary">.</span>
+          LP<span className="text-secondary dark:text-white">.</span>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a
             href="#about"
-            className="text-secondary hover:text-primary transition-colors relative group"
+            className="text-secondary dark:text-white hover:text-primary transition-colors"
           >
-            Sobre
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            {t("nav.about")}
           </a>
           <a
             href="#projects"
-            className="text-secondary hover:text-primary transition-colors relative group"
+            className="text-secondary dark:text-white hover:text-primary transition-colors"
           >
-            Projetos
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            {t("nav.projects")}
           </a>
           <a
             href="#services"
-            className="text-secondary hover:text-primary transition-colors relative group"
+            className="text-secondary dark:text-white hover:text-primary transition-colors"
           >
-            Serviços
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            {t("nav.services")}
           </a>
           <a
             href="#contact"
-            className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            className="text-secondary dark:text-white hover:text-primary transition-colors"
           >
-            Contato
+            {t("nav.contact")}
           </a>
+          <ThemeToggle />
+          <LanguageToggle />
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 hover:bg-primary/10 rounded-full transition-colors"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <X className="h-6 w-6 text-secondary" />
-          ) : (
-            <Menu className="h-6 w-6 text-secondary" />
-          )}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
+          <LanguageToggle />
+          <button
+            className="p-2 hover:bg-primary/10 rounded-full transition-colors"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-secondary dark:text-white" />
+            ) : (
+              <Menu className="h-6 w-6 text-secondary dark:text-white" />
+            )}
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
@@ -74,31 +81,31 @@ const Navigation = () => {
             <div className="flex flex-col space-y-6">
               <a
                 href="#about"
-                className="text-secondary hover:text-primary transition-colors flex items-center"
+                className="text-secondary dark:text-white hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sobre
+                {t("nav.about")}
               </a>
               <a
                 href="#projects"
-                className="text-secondary hover:text-primary transition-colors flex items-center"
+                className="text-secondary dark:text-white hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Projetos
+                {t("nav.projects")}
               </a>
               <a
                 href="#services"
-                className="text-secondary hover:text-primary transition-colors flex items-center"
+                className="text-secondary dark:text-white hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Serviços
+                {t("nav.services")}
               </a>
               <a
                 href="#contact"
-                className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors text-center"
+                className="text-secondary dark:text-white hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contato
+                {t("nav.contact")}
               </a>
             </div>
           </div>
