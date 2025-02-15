@@ -33,25 +33,25 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a
             href="#about"
-            className="text-secondary dark:text-white hover:text-primary transition-colors"
+            className="relative text-secondary dark:text-white hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
           >
             {t("nav.about")}
           </a>
           <a
             href="#projects"
-            className="text-secondary dark:text-white hover:text-primary transition-colors"
+            className="relative text-secondary dark:text-white hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
           >
             {t("nav.projects")}
           </a>
           <a
             href="#services"
-            className="text-secondary dark:text-white hover:text-primary transition-colors"
+            className="relative text-secondary dark:text-white hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
           >
             {t("nav.services")}
           </a>
           <a
             href="#contact"
-            className="text-secondary dark:text-white hover:text-primary transition-colors"
+            className="relative text-secondary dark:text-white hover:text-primary transition-colors after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
           >
             {t("nav.contact")}
           </a>
