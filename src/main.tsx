@@ -1,11 +1,16 @@
 
 import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
 import App from './App.tsx';
 import './index.css';
 import { TranslationProvider } from '@/hooks/useTranslation';
 
-createRoot(document.getElementById("root")!).render(
-  <TranslationProvider>
-    <App />
-  </TranslationProvider>
+const root = createRoot(document.getElementById("root")!);
+
+root.render(
+  <StrictMode>
+    <TranslationProvider>
+      <App />
+    </TranslationProvider>
+  </StrictMode>
 );
