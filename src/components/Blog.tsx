@@ -57,7 +57,8 @@ const Blog = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="group"
+              className="group cursor-pointer"
+              onClick={() => window.location.href = `/blog/${post.id}`}
             >
               <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <img
@@ -75,12 +76,9 @@ const Blog = () => {
                   <p className="text-secondary/80 dark:text-white/80 mb-4">
                     {post.excerpt}
                   </p>
-                  <a
-                    href={`/blog/${post.id}`}
-                    className="inline-flex items-center text-primary hover:text-primary/80 transition-colors gap-2"
-                  >
-                    Ler mais <ArrowRight className="w-4 h-4" />
-                  </a>
+                  <span className="inline-flex items-center text-primary group-hover:text-primary/80 transition-colors gap-2">
+                    Ler mais <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </div>
               </div>
             </motion.article>

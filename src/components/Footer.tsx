@@ -6,63 +6,62 @@ const Footer = () => {
     <footer className="bg-secondary py-12 text-white/90">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold text-primary mb-4">
-              LP<span className="text-white">.</span>
-            </h3>
-            <p className="text-white/70 mb-6">
-              Soluções inovadoras em logística e engenharia de produção para
-              otimizar seus processos e maximizar resultados.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-          
-          <div>
+          <div className="flex flex-col items-center text-center">
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-white/70 hover:text-primary transition-colors inline-flex items-center gap-2">
+                <a href="#about" className="text-white/70 hover:text-primary transition-colors">
                   Sobre
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-white/70 hover:text-primary transition-colors inline-flex items-center gap-2">
+                <a href="#projects" className="text-white/70 hover:text-primary transition-colors">
                   Projetos
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-white/70 hover:text-primary transition-colors inline-flex items-center gap-2">
+                <a href="#services" className="text-white/70 hover:text-primary transition-colors">
                   Serviços
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/70 hover:text-primary transition-colors inline-flex items-center gap-2">
+                <a href="#contact" className="text-white/70 hover:text-primary transition-colors">
                   Contato
                 </a>
               </li>
             </ul>
           </div>
           
-          <div>
+          <div className="flex flex-col items-center text-center">
+            <h3 className="text-2xl font-bold text-primary mb-4">
+              LP<span className="text-white">.</span>
+            </h3>
+            <p className="text-white/70 mb-6">
+              Soluções inovadoras em logística e engenharia de produção.
+            </p>
+            <div className="flex justify-center items-center space-x-6">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-primary transition-colors transform hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-7 h-7" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-primary transition-colors transform hover:scale-110"
+                aria-label="GitHub"
+              >
+                <Github className="w-7 h-7" />
+              </a>
+            </div>
+          </div>
+          
+          <div className="flex flex-col items-center text-center">
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-4">
               <li>
