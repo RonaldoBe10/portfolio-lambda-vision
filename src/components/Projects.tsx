@@ -1,6 +1,5 @@
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { useNavigate } from "react-router-dom";
 
 type Project = {
   id: number;
@@ -35,8 +34,6 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
-  const navigate = useNavigate();
-
   return (
     <section id="projects" className="section-padding bg-gradient-to-br from-background via-accent/5 to-background">
       <div className="container mx-auto">
@@ -57,7 +54,7 @@ const Projects = () => {
             <Card
               key={project.id}
               className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-white/30 backdrop-blur-sm bg-white/60"
-              onClick={() => navigate(`/project/${project.id}`)}
+              onClick={() => window.location.href = `/project/${project.id}`}
             >
               <CardHeader className="p-0">
                 <img
