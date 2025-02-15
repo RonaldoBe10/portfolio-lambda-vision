@@ -14,7 +14,7 @@ const Footer = () => {
               Soluções inovadoras em logística e engenharia de produção para
               otimizar seus processos e maximizar resultados.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center space-x-4">
               <a
                 href="https://linkedin.com"
                 target="_blank"

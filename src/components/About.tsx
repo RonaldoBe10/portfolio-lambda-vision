@@ -18,11 +18,11 @@ const About = () => {
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 border border-primary/20">
             Sobre Mim
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-secondary mb-6 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-secondary dark:text-white mb-6 leading-tight">
             Experiência e Dedicação em{" "}
             <span className="text-primary">Cada Projeto</span>
           </h2>
-          <p className="text-lg text-secondary/80">
+          <p className="text-lg text-secondary/80 dark:text-white/80">
             Com mais de uma década de experiência em logística e engenharia de
             produção, trago soluções inovadoras e eficientes para os desafios mais
             complexos do setor industrial e logístico.
@@ -31,16 +31,16 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="glass rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-white/30">
-            <h3 className="text-2xl font-semibold text-secondary mb-4">
+            <h3 className="text-2xl font-semibold text-secondary dark:text-white mb-4">
               Formação e Experiência
             </h3>
-            <p className="text-secondary/80 mb-6 text-lg">
+            <p className="text-secondary/80 dark:text-white/80 mb-6 text-lg">
               Engenheiro de Produção formado, com especialização em Gestão de
               Projetos e Logística. Experiência em empresas de grande porte e
               projetos internacionais, sempre buscando a excelência operacional.
             </p>
             <a
-              href="#contact"
+              href="/about/experience"
               className="text-primary hover:text-primary/80 font-medium inline-flex items-center group"
             >
               Saiba mais
@@ -61,7 +61,7 @@ const About = () => {
           </div>
 
           <div className="glass rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-white/30">
-            <h3 className="text-2xl font-semibold text-secondary mb-6">
+            <h3 className="text-2xl font-semibold text-secondary dark:text-white mb-6">
               Habilidades
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -73,23 +73,6 @@ const About = () => {
                   {skill}
                 </span>
               ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">10+</div>
-              <div className="text-secondary/80">Anos de Experiência</div>
-            </div>
-            <div className="glass p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">50+</div>
-              <div className="text-secondary/80">Projetos Concluídos</div>
-            </div>
-            <div className="glass p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-secondary/80">Satisfação dos Clientes</div>
             </div>
           </div>
         </div>
